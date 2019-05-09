@@ -1,18 +1,20 @@
-#https://api.lolis.life
-
 import requests
 
-animePic = [
-    'neko',
-    'futa',
-    'kawaii',
-    'slave',
-    'pat',
-    'monster'
-]
-
-def genAnimePic(type):
-    if type.lower() in animePic:
+class genAnimePicture:
+    animeTypesList = [
+        'neko',
+        'futa',
+        'kawaii',
+        'slave',
+        'pat',
+        'monster'
+    ]
+	
+    def __init__(self, type):
+        if type.lower() not in self.animeTypesList:
+            raise ValueError('Type of anime not in anime types list')
         req = requests.get(f"https://api.lolis.life/{type.lower()}")
-        return req.json()['url']
-    return None
+        self.url = req.json()['url']
+
+    def __repr__(self):
+        return None if not hasattr(self, 'url') else self.url
