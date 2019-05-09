@@ -2,30 +2,17 @@
 
 import requests
 
-def genNeko():
-    req = requests.get("https://api.lolis.life/neko")
-    return req.json()['url']
+animePic = [
+    'neko',
+    'futa',
+    'kawaii',
+    'slave',
+    'pat',
+    'monster'
+]
 
-def genFuta():
-    req = requests.get("https://api.lolis.life/futa")
-    return req.json()['url']
-
-def genKawaii():
-    req = requests.get("https://api.lolis.life/kawaii")
-    return req.json()['url']
-
-def genLewd():
-    req = requests.get("https://api.lolis.life/lewd")
-    return req.json()['url']
-
-def genSlave():
-    req = requests.get("https://api.lolis.life/slave")
-    return req.json()['url']
-
-def genPat():
-    req = requests.get("https://api.lolis.life/pat")
-    return req.json()['url']
-
-def genMonster():
-    req = requests.get("https://api.lolis.life/monster")
-    return req.json()['url']
+def genAnimePic(type):
+    if type.lower() in animePic:
+        req = requests.get(f"https://api.lolis.life/{type.lower()}")
+        return req.json()['url']
+    return None
