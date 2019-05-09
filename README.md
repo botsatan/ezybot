@@ -1,2 +1,1 @@
 # ezybot
-EzyChatBot
