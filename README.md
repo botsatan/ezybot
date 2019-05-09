@@ -1,4 +1,6 @@
-# EzyBot
+# EzyBot    |    [![OpenIssues](https://img.shields.io/github/issues/royypercents/ezybot.svg)](https://github.com/royypercents/ezybot/issues)  [![LastCommit](https://img.shields.io/github/last-commit/royypercents/ezybot.svg)](https://github.com/royypercents/ezybot/)
+
+
 
 
 ## 🔰  Contributors
