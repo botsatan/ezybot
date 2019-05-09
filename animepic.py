@@ -18,3 +18,6 @@ class genAnimePicture:
 
     def __repr__(self):
         return None if not hasattr(self, 'url') else self.url
+
+if __name__ == '__main__':
+	print(genAnimePicture('neko'))
