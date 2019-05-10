@@ -12,7 +12,7 @@ class youtubeSearch:
             response = urllib.request.urlopen(searchURL)
             soup = BeautifulSoup(response.read(), 'html.parser')
             for video in soup.findAll(attrs={'class':'yt-uix-tile-link'}):
-                self.result.append({'title': video['title'], 'url': f"https://youtube.com/{video['href']}"})
+                self.result.append({'title': video['title'], 'url': f"https://youtube.com{video['href']}"})
 
     def __repr__(self):
         return '%s(%s)' % (self.__class__.__name__, ', '.join(['%s=%r' % (key, value) for key, value in self.__dict__.items()]))
