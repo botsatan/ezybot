@@ -28,3 +28,15 @@ def getLastTime(stations):
 def getO3(stations):
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]['AQILast']['O3']['value']
+
+def getCO(stations):
+	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
+	return req.json()['stations'][stations]['AQILast']['CO']['value']
+
+def getNO2(stations):
+	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
+	return req.json()['stations'][stations]['AQILast']['NO2']['value']
+
+def getSO2(stations):
+	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
+	return req.json()['stations'][stations]['AQILast']['SO2']['value']
