@@ -15,3 +15,11 @@ def getPM10(stations):
 def getPM25(stations):
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]['AQILast']['AQI']['aqi']
+
+def getLastDate(stations):
+	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
+	return req.json()['stations'][stations]['AQILast']['date']
+
+def getLastTime(stations):
+	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
+	return req.json()['stations'][stations]['AQILast']['time']
