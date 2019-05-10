@@ -1,3 +1,5 @@
+#เดี๋ยวมาแก้ทีหลัง 10/5/62
+
 import requests
 
 def getRaw(stations):
