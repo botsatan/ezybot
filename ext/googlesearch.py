@@ -1,4 +1,4 @@
-import requests
+import requests, urllib
 from bs4 import BeautifulSoup
 
 class googleSearch:
@@ -16,7 +16,7 @@ class googleSearch:
                 description = result.find('span', attrs={'class': 'st'})
                 if link and title:
                     if link != '#':
-                        self.result.append({'title': title.get_text(), 'description': '' if not description else description.get_text(), 'link': link['href']})
+                        self.result.append({'title': title.get_text(), 'description': '' if not description else description.get_text(), 'link': urllib.parse.unquote(link['href'][7:])})
     def __repr__(self):
         return '%s(%s)' % (self.__class__.__name__, ', '.join(['%s=%r' % (key, value) for key, value in self.__dict__.items()]))
     
