@@ -1,4 +1,5 @@
-# EzyBot    |    [![OpenIssues](https://img.shields.io/github/issues/royypercents/ezybot.svg)](https://github.com/royypercents/ezybot/issues)  [![LastCommit](https://img.shields.io/github/last-commit/royypercents/ezybot.svg)](https://github.com/royypercents/ezybot/)
+# EzyBot
+[![OpenIssues](https://img.shields.io/github/issues/royypercents/ezybot.svg)](https://github.com/royypercents/ezybot/issues)  [![LastCommit](https://img.shields.io/github/last-commit/royypercents/ezybot.svg)](https://github.com/royypercents/ezybot/) [![Size](https://img.shields.io/github/repo-size/royypercents/ezybot.svg)](https://github.com/royypercents/ezybot/)
 
 
 
