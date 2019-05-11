@@ -6,5 +6,5 @@ def urlshort(url):
 		short = requests.post(api, params={"url":url})
 		return short.json()['url']
 		#return short.json()
-	Except:
+	else:
 		return 'ERR'
