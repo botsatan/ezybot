@@ -3,18 +3,21 @@
 import requests
 
 def getRaw(stations):
+	#Raw data
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]
 
 def getPM25(stations):
+	#PM2.5 value
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]['AQILast']['PM25']['value']
 
 def getPM10(stations):
+	#PM10 value
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]['AQILast']['PM10']['value']
 
-def getPM25(stations):
+def getAQI(stations):
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]['AQILast']['AQI']['aqi']
 
@@ -35,7 +38,7 @@ def getCO(stations):
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]['AQILast']['CO']['value']
 
-def getNO2(stations):
+def getNO2(stations):	
 	req = requests.get("http://air4thai.net/forappV2/getAQI_JSON.php")
 	return req.json()['stations'][stations]['AQILast']['NO2']['value']
 
