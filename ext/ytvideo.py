@@ -1,3 +1,6 @@
+#2bugs
+#Fix later
+
 import requests, json
 import urllib.request
 from bs4 import BeautifulSoup
